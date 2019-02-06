@@ -5,6 +5,9 @@ namespace Rikudou\DI\Services;
 use Rikudou\DI\Annotations\Service;
 
 /**
+ * If we don't define this attribute here, the service locator will throw an exception
+ * that it doesn't know how to inject parameter of type "string"
+ *
  * @Service(
  *     params={"someParameter"="someValue"}
  * )
