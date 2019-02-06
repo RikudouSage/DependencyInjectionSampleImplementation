@@ -15,7 +15,8 @@ use Rikudou\DI\Exception\ServiceNotFoundException;
  *
  * The implementation is incomplete, for example it does not check whether the service is instantiable, does not
  * support interfaces, it isn't cached at all which makes it really slow as the service configuration is
- * reloaded every time using Reflection, it supports only constructor injection etc.
+ * reloaded every time using Reflection, it supports only constructor injection, doesn't check for circular
+ * dependencies etc.
  *
  * Also the class is not the most organized piece of code I ever wrote but as it's just an example for learning
  * I think it works.
