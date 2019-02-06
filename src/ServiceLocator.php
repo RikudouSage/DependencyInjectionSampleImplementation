@@ -167,7 +167,7 @@ class ServiceLocator
                                         'value' => $configuredParams[$parameter->getName()],
                                     ];
                                 }
-                                // if the class did not configure this parameter, we check whether it's a class
+                            // if the class did not configure this parameter, we check whether it's a class
                             } elseif (class_exists($type)) {
                                 // if it is a class, we mark this parameter as service
                                 // we could check whether the class is a service (contains @Service annotation)
