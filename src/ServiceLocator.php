@@ -85,6 +85,15 @@ class ServiceLocator
         return $this->services[$service];
     }
 
+    /**
+     * This static method should be used instead of constructing new object
+     *
+     * @param string $service
+     * @return object
+     * @throws ServiceArgumentException
+     * @throws ServiceNotFoundException
+     * @throws \Doctrine\Common\Annotations\AnnotationException
+     */
     public static function getService(string $service)
     {
         if (is_null(self::$instance)) {
