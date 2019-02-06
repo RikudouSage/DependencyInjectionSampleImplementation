@@ -60,7 +60,7 @@ class ServiceLocator
      * @throws ServiceNotFoundException
      * @throws \Doctrine\Common\Annotations\AnnotationException
      *
-     * @return mixed
+     * @return object
      */
     public function get(string $service)
     {
