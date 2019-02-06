@@ -14,11 +14,11 @@ use Rikudou\DI\Annotations\Service;
  */
 class ServiceWithScalarAttributes
 {
-
     /**
      * @var Service1
      */
     private $service1;
+
     /**
      * @var string
      */
@@ -37,5 +37,4 @@ class ServiceWithScalarAttributes
     {
         return $this->someParameter;
     }
-
 }
