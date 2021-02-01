@@ -44,11 +44,6 @@ class ServiceLocator
      */
     private $services = [];
 
-    /**
-     * Marked as internal as the ServiceLocator should be used statically
-     *
-     * @internal
-     */
     public function __construct()
     {
         AnnotationRegistry::registerLoader('class_exists');
@@ -83,26 +78,6 @@ class ServiceLocator
 
         // return the constructed service
         return $this->services[$service];
-    }
-
-    /**
-     * This static method should be used instead of constructing new object
-     *
-     * @param string $service
-     *
-     * @throws ServiceArgumentException
-     * @throws ServiceNotFoundException
-     * @throws \Doctrine\Common\Annotations\AnnotationException
-     *
-     * @return object
-     */
-    public static function getService(string $service)
-    {
-        if (is_null(self::$instance)) {
-            self::$instance = new self();
-        }
-
-        return self::$instance->get($service);
     }
 
     /**

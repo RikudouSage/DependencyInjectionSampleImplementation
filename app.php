@@ -10,10 +10,12 @@ use Rikudou\DI\Services\ServiceWithScalarAttributes;
 
 require_once __DIR__ . "/vendor/autoload.php";
 
+$serviceLocator = new ServiceLocator();
+
 // get the Service1 from service locator
 // when no service name is configured, it defaults to the class name
-$service1 = ServiceLocator::getService(Service1::class);
-$serviceWithScalarAttributes = ServiceLocator::getService(ServiceWithScalarAttributes::class);
+$service1 = $serviceLocator->get(Service1::class);
+$serviceWithScalarAttributes = $serviceLocator->get(ServiceWithScalarAttributes::class);
 
 // these assertions all should be true
 assert($service1 instanceof Service1);
