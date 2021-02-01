@@ -24,13 +24,6 @@ use Rikudou\DI\Exception\ServiceNotFoundException;
 class ServiceLocator
 {
     /**
-     * Holds the instance used for static access to service locator
-     *
-     * @var ServiceLocator|null
-     */
-    private static $instance = null;
-
-    /**
      * Holds the configuration of services, e.g. service name, class, parameters configuration etc.
      *
      * @var array
